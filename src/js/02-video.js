@@ -10,5 +10,5 @@ const showSeconds = throttle(({ seconds }) => {
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   }, 1000);
 
+player.setCurrentTime(JSON.parse(localStorage.getItem(STORAGE_KEY)) || 0)
 player.on(`timeupdate`, showSeconds)
-player.setCurrentTime(JSON.parse(localStorage.getItem(STORAGE_KEY)))
